@@ -5,7 +5,6 @@ function World({ data = [] }) {
     <StyledWorld className="world" data={data}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        id="svg2"
         width="950"
         height="620"
         x="0"
