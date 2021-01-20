@@ -37,10 +37,16 @@ export default function App() {
       //  console.log("Fired when any transformation has happened", e);
     });
   }, []);
-  const { isLoading, error, data, isFetching } = useQuery("repoData", () =>
-    fetch("https://coronavirus-19-api.herokuapp.com/countries").then((res) =>
-      res.json()
-    )
+  const { data } = useQuery(
+    "covidWorld",
+    () =>
+      fetch("https://coronavirus-19-api.herokuapp.com/countries").then((res) =>
+        res.json()
+      ),
+    {
+      cacheTime: 360000,
+      staleTime: 360000
+    }
   );
 
   return (

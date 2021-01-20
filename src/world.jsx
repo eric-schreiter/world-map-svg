@@ -1,7 +1,6 @@
 import React from "react";
 import StyledWorld from "./StyledWorld";
 function World({ data = [] }) {
-  console.log(data);
   return (
     <StyledWorld className="world" data={data}>
       <svg
